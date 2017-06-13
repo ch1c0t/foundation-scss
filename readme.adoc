@@ -1,0 +1,21 @@
+== Installation
+
+[source,bash]
+----
+gem install foundation-scss
+----
+
+== Usage
+
+[source,ruby]
+----
+require 'foundation/scss/in/sass_path'                              
+
+sass_string = <<~S                
+  @import foundation              
+  @include foundation-everything  
+S                                 
+
+require 'sass'                    
+Sass::Engine.new(sass_string).render                           
+----
